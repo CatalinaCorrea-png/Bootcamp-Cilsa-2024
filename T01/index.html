@@ -1,0 +1,79 @@
+<!-- TAREA 1 -->
+<!-- EJ 0: FORMULARIO CON 2 BOTONES DE ESTILO: 1 COMO QUERAMOS/OTRO ALTO CONSTRASTE  -->
+<!-- EJ 1: PONERLE EL CSS -->
+<!-- EJ 2: PODER ALTERNAR LOS ESTILOS -->
+<!-- EJ 3: INCORPORAR VALIDACIONES (como de mail) -->
+<!-- EJ 4: INCORPORAR CAMPOS OBLIGATORIOS -->
+<!-- BONUS: ENVIAR EL MAIL (enviar form?) - PAISES DESPLEGABLE - CONTROL DE FECHA DE NACIMIENTO (+18) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAREA 01</title>
+  <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+
+  <div class="fondo fondo-1">
+
+    <h2 class="titulo titulo-1">FORMULARIO DE DATOS PERSONALES</h2>
+
+    <form class="form form-1">
+      <ul>
+        <li>
+          <label class="label label-1" for="nombre">NOMBRE:</label>
+          <input class="input input-1" type="text" id="nombre" name="nombre" placeholder="Su nombre aquí">
+          <div class="error-text"></div>
+        </li>
+        <li>
+          <label class="label label-1" for="apellido">APELLIDO:</label>
+          <input class="input input-1" type="text" id="apellido" name="apellido" placeholder="Su apellido aquí">
+          <div class="error-text"></div>
+        </li>
+        <li>
+          <label class="label label-1" for="email">EMAIL:</label>
+          <input class="input input-1" type="text" id="email" name="email" placeholder="Su email aquí">
+          <div class="error-text"></div>
+        </li>
+        <li>
+          <label class="label label-1" for="fecha">FECHA DE NACIMIENTO:</label>
+          <input class="input input-1" type="date" id="fecha" name="fecha">
+          <div class="error-text"></div>
+        </li>
+        <li>
+          <label class="label label-1" for="pais">PAIS DE RESIDENCIA:</label>
+          <div class="select content-select">
+            <select class="input input-1" name="Pais" id="pais">
+              <option value="Argentina">Argentina</option>
+              <option value="">Bolivia</option>
+              <option value="">Brasil</option>
+              <option value="">Chile</option>
+              <option value="">Colombia</option>
+              <option value="">Ecuador</option>
+              <option value="">Mexico</option>
+              <option value="">Paraguay</option>
+              <option value="">Uruguay</option>
+              <option value="">Venezuela</option>
+            </select>
+            <i></i>
+          </div>
+        </li>
+        <li>
+          <button class="submit-bt bt-1" type="submit">ENVIAR</button>
+        </li>
+      </ul>
+      
+    </form>
+
+    <div class="botones botones-1">
+      <button id="tema1-bt" class="bt bt-1">Estilo de Alto Contraste</button>
+      <button id="tema2-bt" class="bt bt-1">Estilo 2</button>
+    </div>
+
+  </div>
+
+  <script src="./js/temas.js"></script>
+  <script src="./js/validar.js"></script>
+</body>
+</html>

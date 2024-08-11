@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/*-- GENERAL */
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+body{
+	margin: 0;
+	height: 100%;
+	font-size: 1.2rem;
+  /* font-family: "Oswald", sans-serif; */
+  font-family: 
+      'Quicksand', sans-serif;
+  font-weight: 200;
+}
+.content-input input,
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+h2 { margin: 0;}
+
+.fondo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  row-gap: 20px;
+  
+  .titulo {
+    padding: 10px;
+    width: 500px;
+    text-align: center;
+  }
+
+  .form {
+    padding: 40px;
+    width: 500px;
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .label {
+        width: 300px;
+        font-weight: 600;
+      }
+      .input {
+        width: 300px;
+        height: 25px;
+        font-size: 1rem;
+        &::placeholder {
+          color: gray;
+        }
+      }
+      .submit-bt {
+        width: 300px;
+      }
+    }
+  }
+  
+  .botones {
+  padding: 15px 30px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+
+    button {
+      font-size: 1rem;
+    }
+  }
+}
+
+/*-- ESTILO 1 */
+
+.fondo-1 {
+  background-color: rgb(73, 60, 40);
+  background-image: url(../img/humo.jpg);
+  background-size: cover;
+
+  .titulo-1 {
+    background-color: rgb(27, 30, 44);
+    border-radius: 10px;
+    color: ghostwhite;
+    box-shadow: 5px 5px 15px ghostwhite;
+    transition: all 0.25s ease;
+    &:hover {
+      color: rgb(31, 245, 245);
+      box-shadow: 5px 5px 15px rgb(31, 245, 245);
+    }
+  }
+  .form-1 {
+    border-radius: 10px;
+    background-color: rgb(27, 30, 44);
+    color: ghostwhite;
+    box-shadow: 5px 5px 15px ghostwhite;
+    transition: all 0.25s ease;
+    &:hover {
+      box-shadow: 5px 5px 15px rgb(31, 245, 245);
+    }
+
+    li:hover{
+        color: rgb(31, 245, 245);
+    }
+    
+    .input-1{
+      background-color: rgba(0, 0, 0,0);
+      border: 0;
+      border-bottom: 1px solid ghostwhite;
+      color: ghostwhite;
+
+      &:hover,&:focus {
+        background-color: rgba(0, 0, 0,0);
+        outline: none;
+        border-bottom: 1px solid rgb(31, 245, 245);
+      }
+    }
+    .input-1:is(:-webkit-autofill, :autofill) {
+      background-color: rgba(0, 0, 0,0);
+      border: 0;
+      border-bottom: 1px solid rgb(31, 245, 245);
+      color: rgb(31, 245, 245);
+    }
+
+    .content-select {
+      width: 300px;
+      position: relative;
+      padding: 5px;
+    }
+     
+    .content-select select{
+      width: 100%;
+      cursor: pointer;
+      padding: 7px 10px;
+      height: 42px;
+      outline: 0; 
+      border: 0;
+      border-radius: 0;
+      background: rgba(0, 247, 255, 0.164);
+      color: #7b7b7b;
+      font-size: 1em;
+      color: ghostwhite;
+      font-family: 
+      'Quicksand', sans-serif;
+      border: 1px solid ghostwhite;
+      border-radius: 12px;
+      position: relative;
+      transition: all 0.25s ease;
+      
+        &:hover, &:focus {
+          border: 1px solid rgb(31, 245, 245);
+        }
+        option {
+          background: rgba(0, 247, 255, 0.164);
+          color: #7b7b7b;
+        }
+    }
+    /* 
+    Creamos la fecha que aparece a la izquierda del select.
+    Realmente este elemento es un cuadrado que sólo tienen
+    dos bordes con color y que giramos con transform: rotate(-45deg);
+    */
+    .content-select i{
+      position: absolute;
+      right: 20px;
+      top: calc(50% - 13px);
+      width: 16px;
+      height: 16px;
+      display: block;
+      border-left:4px solid ghostwhite;
+      border-bottom:4px solid ghostwhite;
+      transform: rotate(-45deg); /* Giramos el cuadrado */
+      transition: all 0.25s ease;
+    }
+    
+    .content-select:hover i{
+      margin-top: 3px;
+    }
+
+    .bt-1 {
+      padding: 10px;
+      font-size: 1.2rem;
+      font-family: 
+      'Quicksand', sans-serif;
+      background: rgba(46, 97, 173, 0.521);
+      border-radius: 10px;
+      color: ghostwhite;
+      font-weight: 600;
+      outline: none;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.botones-1 {
+  border-radius: 10px;
+  background-color: rgb(27, 30, 44);
+  box-shadow: 5px 5px 15px ghostwhite;
+  
+  .bt-1 {
+    padding: 7px 10px;
+    font-family: 
+    'Quicksand', sans-serif;
+    background: rgba(46, 97, 173, 0.521);
+    border-radius: 10px;
+    color: ghostwhite;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid rgba(248, 248, 255, 0.37);
+    cursor: pointer;
+  }
+  transition: all 0.25s ease;
+  &:hover {
+    box-shadow: 5px 5px 15px rgb(31, 245, 245);
+  }
+}
+
+
+
+/*-- ESTILO 2 */
+
+.fondo-2 {
+  background-color: rgb(73, 60, 40);
+  background-image: url(../img/plantKiller.jpg);
+  background-size: cover;
+  background-position: center;
+
+  .titulo-1 {
+    background-color: rgb(112, 90, 49);
+    border-radius: 10px;
+    color: ghostwhite;
+    box-shadow: 5px 5px 15px rgb(49, 40, 26);
+    transition: all 0.25s ease;
+    &:hover {
+      color: rgb(190, 166, 86);
+      box-shadow: 5px 5px 15px rgb(190, 166, 86);
+    }
+  }
+  .form-1 {
+    border-radius: 10px;
+    background-color: rgb(112, 90, 49);
+    color: ghostwhite;
+    box-shadow: 5px 5px 15px rgb(49, 40, 26);
+    transition: all 0.25s ease;
+    &:hover {
+      box-shadow: 5px 5px 15px rgb(190, 166, 86);
+    }
+
+    li:hover{
+        color: rgb(190, 166, 86);
+    }
+    
+    .input-1{
+      background-color: rgba(0, 0, 0,0);
+      border: 0;
+      border-bottom: 1px solid ghostwhite;
+      color: ghostwhite;
+
+      &:hover,&:focus {
+        background-color: rgba(0, 0, 0,0);
+        outline: none;
+        border-bottom: 1px solid rgb(190, 166, 86);
+      }
+    }
+    .input-1:is(:-webkit-autofill, :autofill) {
+      background-color: rgba(0, 0, 0,0);
+      border: 0;
+      border-bottom: 1px solid rgb(190, 166, 86);
+      color: rgba(255, 196, 0, 0.521);
+    }
+
+    .content-select{
+      width: 300px;
+      position: relative;
+      padding: 5px;
+    }
+     
+    .content-select select{
+      width: 100%;
+      cursor: pointer;
+      padding: 7px 10px;
+      height: 42px;
+      outline: 0; 
+      border: 0;
+      border-radius: 0;
+      background: rgba(255, 196, 0, 0.2);
+      color: #7b7b7b;
+      font-size: 1em;
+      color: ghostwhite;
+      font-family: 
+      'Quicksand', sans-serif;
+      border: 1px solid ghostwhite;
+      border-radius: 12px;
+      position: relative;
+      transition: all 0.25s ease;
+      
+        &:hover, &:focus {
+          border: 1px solid rgb(190, 166, 86);
+        }
+        option {
+          background: rgba(255, 196, 0, 0.308);
+          color: #7b7b7b;
+        }
+    }
+    /* 
+    Creamos la fecha que aparece a la izquierda del select.
+    Realmente este elemento es un cuadrado que sólo tienen
+    dos bordes con color y que giramos con transform: rotate(-45deg);
+    */
+    .content-select i{
+      position: absolute;
+      right: 20px;
+      top: calc(50% - 13px);
+      width: 16px;
+      height: 16px;
+      display: block;
+      border-left:4px solid ghostwhite;
+      border-bottom:4px solid ghostwhite;
+      transform: rotate(-45deg); /* Giramos el cuadrado */
+      transition: all 0.25s ease;
+    }
+    
+    .content-select:hover i{
+      margin-top: 3px;
+    }
+
+    .bt-1 {
+      padding: 10px;
+      font-size: 1.2rem;
+      font-family: 
+      'Quicksand', sans-serif;
+      /* background: rgba(46, 97, 173, 0.521); */
+      background: rgba(255, 196, 0, 0.521);
+      border-radius: 10px;
+      color: ghostwhite;
+      font-weight: 600;
+      outline: none;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+
+  .botones-1 {
+    border-radius: 10px;
+    background-color: rgb(112, 90, 49);
+    box-shadow: 5px 5px 15px rgb(49, 40, 26);
+    
+    .bt-1 {
+      padding: 7px 10px;
+      font-family: 
+      'Quicksand', sans-serif;
+      background: rgba(255, 196, 0, 0.521);
+      border-radius: 10px;
+      color: ghostwhite;
+      font-weight: 600;
+      outline: none;
+      border: 1px solid rgba(248, 248, 255, 0.37);
+      cursor: pointer;
+    }
+    transition: all 0.25s ease;
+    &:hover {
+      box-shadow: 5px 5px 15px rgb(190, 166, 86);
+    }
+  }
+
+}
+
+ 
+
+
+/*-- VALIDACION */
+
+.error-style{
+  background-color: rgba(0, 0, 0,0);
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid red;
+  color: ghostwhite;
+  &:hover {
+    border-bottom: 2px solid red;
+
+  }
+}
+.error-text {
+  color: red;
+  font-size: 1rem;
+}
