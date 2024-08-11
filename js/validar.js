@@ -104,10 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const campo = document.getElementById(campoId);
     const value = campo.value;
 
-    if (value === ''){
+    if (value === '' || value.length == 0 ){
       mostrarError(campo, mensaje);
       return  false; //? Indicamos que la validacion falló
-    }else{
+    } else if ( /^\s+$/.test(value) ){
+      mostrarError(campo, 'Caracter invalido');
+      return  false; 
+    }
+    else{
       eliminarError(campo);
       // console.log(value);
       return true; //? Indicamos que la validacion fue exitosa
