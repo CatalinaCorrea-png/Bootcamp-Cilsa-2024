@@ -141,9 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
       console.log("El formulario no es valido");
     }else{
-      event.preventDefault();
+      // event.preventDefault();
       console.log("El formulario es valido");
-      // formulario.submit();
+      formulario.submit();
+      alert('Formulario enviado con éxito.');
     }
 
   })
