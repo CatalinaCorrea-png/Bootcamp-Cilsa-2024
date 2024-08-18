@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+  formulario.querySelector('select').addEventListener('change', () => {
+    const indice = document.getElementById("pais").selectedIndex;
+    const input = document.getElementById('pais');
+    if( indice != null || indice != 0 ) {
+      eliminarError(input);
+    }
+  });
 
 // -- VALIDACION EMAIL --------------------------
   //* Utilizando expresion regular
@@ -97,6 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function validarPais(campoId, mensaje) {
+    const input = document.getElementById(campoId);
+    const indice = document.getElementById("pais").selectedIndex;
+    if( indice == null || indice == 0 ) {
+      mostrarError(input,mensaje);
+      return false;
+    } else{
+      eliminarError(input);
+      return true;
+    }
+  }
+
 
   // -- VALIDO LOS CAMPOS --------------------
 
@@ -110,8 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if ( /^\s+$/.test(value) ){
       mostrarError(campo, 'Caracter invalido');
       return  false; 
-    }
-    else{
+    } else{
       eliminarError(campo);
       // console.log(value);
       return true; //? Indicamos que la validacion fue exitosa
@@ -129,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     validar = validarEmail('email','Correo electronico no válido') && validar; 
     //* FECHA
     validar = validarFecha('fecha','Fecha no valida') && validar;
+    validar = validarPais('pais','Opción no válida') && validar;
 
     return validar;
   }
