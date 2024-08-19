@@ -10,71 +10,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TAREA 01</title>
+  <title>FORMULARIO TAREA 01</title>
   <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
+  <main>
 
-  <div class="fondo fondo-1">
-
-    <h2 class="titulo titulo-1">FORMULARIO DE DATOS PERSONALES</h2>
-
-    <form class="form form-1">
-      <ul>
-        <li>
-          <label class="label label-1" for="nombre">NOMBRE:</label>
-          <input alt="nombre" class="input input-1" type="text" id="nombre" name="nombre" placeholder="Su nombre aquí">
-          <div class="error-text"></div>
-        </li>
-        <li>
-          <label class="label label-1" for="apellido">APELLIDO:</label>
-          <input alt="apellido" class="input input-1" type="text" id="apellido" name="apellido" placeholder="Su apellido aquí">
-          <div class="error-text"></div>
-        </li>
-        <li>
-          <label class="label label-1" for="email">EMAIL:</label>
-          <input alt="email" class="input input-1" type="text" id="email" name="email" placeholder="Su email aquí">
-          <div class="error-text"></div>
-        </li>
-        <li>
-          <label class="label label-1" for="fecha">FECHA DE NACIMIENTO:</label>
-          <input alt="fecha de nacimiento" class="input input-1" type="date" id="fecha" name="fecha">
-          <div class="error-text"></div>
-        </li>
-        <li>
-          <label class="label label-1" for="pais">PAIS DE RESIDENCIA:</label>
-          <div class="select content-select">
-            <select alt="pais de residencia" class="input input-1" name="pais" id="pais">
-              <option value="">Seleccionar País</option>
-              <option value="1">Argentina</option>
-              <option value="2">Bolivia</option>
-              <option value="3">Brasil</option>
-              <option value="4">Chile</option>
-              <option value="5">Colombia</option>
-              <option value="6">Ecuador</option>
-              <option value="7">Mexico</option>
-              <option value="8">Paraguay</option>
-              <option value="9">Uruguay</option>
-              <option value="10">Venezuela</option>
-              <option value="11">Otro</option>
-            </select>
-            <i></i>
+    <div class="fondo fondo-1">
+  
+      <h1 class="titulo titulo-1">FORMULARIO DE DATOS PERSONALES</h1>
+  
+      <form class="form form-1" id="form" name="form">
+        <P>Los campos marcados con * son obligatorios</P>
+        <ul>
+          <li>
+            <label class="label label-1" for="nombre">* NOMBRE:</label>
+            <input class="input input-1" type="text" id="nombre" name="nombre" placeholder="Su nombre aquí">
             <div class="error-text"></div>
-          </div>
-        </li>
-        <li>
-          <button alt="enviar" class="submit-bt bt-1" type="submit">ENVIAR</button>
-        </li>
-      </ul>
-      
-    </form>
-
-    <div class="botones botones-1">
-      <button id="tema1-bt" class="bt bt-1">Estilo de Alto Contraste</button>
-      <button id="tema2-bt" class="bt bt-1">Estilo 2</button>
+          </li>
+          <li>
+            <label class="label label-1" for="apellido">* APELLIDO:</label>
+            <input class="input input-1" type="text" id="apellido" name="apellido" placeholder="Su apellido aquí">
+            <div class="error-text"></div>
+          </li>
+          <li>
+            <label class="label label-1" for="email">* EMAIL:</label>
+            <input class="input input-1" type="text" id="email" name="email" placeholder="Su email aquí">
+            <div class="error-text"></div>
+          </li>
+          <li>
+            <label class="label label-1" for="fecha">* FECHA DE NACIMIENTO (DD/MM/AAAA):</label>
+            <input class="input input-1" type="date" id="fecha" name="fecha">
+            <div class="error-text"></div>
+          </li>
+          <li>
+            <label class="label label-1" for="pais">* PAIS DE RESIDENCIA:</label>
+            <div class="select content-select">
+              <select class="input input-1" name="pais" id="pais">
+                <option value="">Seleccionar País</option>
+                <option value="1">Argentina</option>
+                <option value="2">Bolivia</option>
+                <option value="3">Brasil</option>
+                <option value="4">Chile</option>
+                <option value="5">Colombia</option>
+                <option value="6">Ecuador</option>
+                <option value="7">Mexico</option>
+                <option value="8">Paraguay</option>
+                <option value="9">Uruguay</option>
+                <option value="10">Venezuela</option>
+                <option value="11">Otro</option>
+              </select>
+              <i></i>
+              <div class="error-text"></div>
+            </div>
+          </li>
+          <li>
+            <button class="submit-bt bt-1" type="submit">ENVIAR</button>
+          </li>
+        </ul>
+        
+      </form>
+  
+      <div class="botones botones-1">
+        <button id="tema1-bt" class="bt bt-1">Estilo de Alto Contraste</button>
+        <button id="tema2-bt" class="bt bt-1">Estilo 2</button>
+      </div>
+  
     </div>
-
-  </div>
+  </main>
 
   <script src="./js/temas.js"></script>
   <script src="./js/validar.js"></script>

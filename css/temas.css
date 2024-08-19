@@ -19,7 +19,11 @@ body{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
-h2 { margin: 0;}
+h1 { margin: 0;}
+p {
+  font-size: 1rem;
+  text-align: center;
+}
 
 .fondo {
   width: 100vw;
