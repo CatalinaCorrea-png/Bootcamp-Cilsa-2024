@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mostrarError(campo, mensaje);
       return  false; //? Indicamos que la validacion falló
     } else if ( /^\s+$/.test(value) || !(/^[a-zA-Z]{3,15}$/.test(value)) ){
-      mostrarError(campo, 'Invalido - Solo letras.');
+      mostrarError(campo, 'Invalido - Solo letras. (3 - 15)');
       return  false; 
     } else {
       eliminarError(campo);

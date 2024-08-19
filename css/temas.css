@@ -19,7 +19,7 @@ body{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
-h1 { margin: 0;}
+h1 { margin: 0; font-size: 2rem;}
 p {
   font-size: 1rem;
   text-align: center;
@@ -27,7 +27,7 @@ p {
 
 .fondo {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
