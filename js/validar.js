@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = campo.value;
 
     if (email === ''){
-      mostrarError(campo, 'Correo electronico obligatorio');
+      mostrarError(campo, '* Correo electronico obligatorio');
       return false; //? Validacion falla
     }else if (!isEmail(email)){
       mostrarError(campo,mensaje);
@@ -126,10 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (value === '' || value.length == 0 ){
       mostrarError(campo, mensaje);
       return  false; //? Indicamos que la validacion falló
-    } else if ( /^\s+$/.test(value) ){
-      mostrarError(campo, 'Caracter invalido');
+    } else if ( /^\s+$/.test(value) || !(/^[a-zA-Z]{3,15}$/.test(value)) ){
+      mostrarError(campo, 'Invalido - Solo letras.');
       return  false; 
-    } else{
+    } else {
       eliminarError(campo);
       // console.log(value);
       return true; //? Indicamos que la validacion fue exitosa
@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let validar = true;
     
     //* NOMBRE y APELLIDO
-    validar = validarCampo('nombre','Campo obligatorio') && validar;  
-    validar = validarCampo('apellido','Campo obligatorio') && validar; 
+    validar = validarCampo('nombre','* Campo obligatorio') && validar;  
+    validar = validarCampo('apellido','* Campo obligatorio') && validar; 
     //* EMAIL
     validar = validarEmail('email','Correo electronico no válido') && validar; 
     //* FECHA
